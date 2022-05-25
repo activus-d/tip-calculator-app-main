@@ -274,7 +274,7 @@ STYLES FOR SCREEN SIZE 450PX
 @media all and ( max-width: 450px ) {
     body {
         height: auto;
-        overflow: hidden;
+        overflow: scroll !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
