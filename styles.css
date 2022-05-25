@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+button, input {
+    border: none;
+    cursor: pointer;
+}
+input {
+    height: 3rem;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+    padding-right: 2rem;
+    color: hsl(183, 100%, 15%);
+    
+}
+input:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+
+/**********************************
+LAYOUT
+**********************************/
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 60%;
+    /* height: 50%; */
+    display: flex;
+}
+.partOne {
+    flex-basis: 50%;
+}
+.partTwo {
+    flex-basis: 50%
+}
+
+/***********************************
+ADDITIONAL STYLES
+***********************************/
+header {
+    margin-bottom: 5rem;
+}
+body {
+    background: hsl(185, 41%, 84%);
+    font-size: 1.4rem;
+}
+main {
+    background: white;
+    padding: 2%;
+    border-radius: 1rem;
+    color:hsl(186, 14%, 43%);
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 3rem;
+}
+.partOne {
+    padding: 2%;
+    border-radius: 0.7rem
+}
+.billCon {
+    padding-bottom: 5%;
+}
+.conDiv {
+    display: flex;
+    justify-content: space-between;
+}
+.errorBill {
+    color: red;
+    font-size: 1.1rem;
+}
+.errorPeople {
+    color: red;
+    font-size: 1.1rem;
+}
+.billInput {
+    padding: 0 1.5% 0 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(189, 41%, 97%);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+.icon {
+    width: 1rem;
+    height: 1.3rem;
+}
+#bill {
+    /* width: 90%; */
+    background: hsl(189, 41%, 97%);
+    text-align: right;
+}
+.tipSelect {
+    margin-bottom: 5%;
+}
+/* .selectTip {
+
+} */
+.tipBtns {
+    padding: 1.5% 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tipBtn {
+    width: 30%;
+    height: 2.2rem;
+    margin: 1% 1% 1% 0;
+    border-radius: 0.3rem;
+    background: hsl(183, 100%, 15%);
+    color: white;
+}
+.tipBtn:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+.tipBtn:focus {
+    background-color: hsl(172, 67%, 45%);
+}
+#customTip {
+    color: hsl(183, 100%, 15%);
+    background: hsl(189, 41%, 97%);
+    font-size: 1rem;
+    text-align: right;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center; 
+    color: hsl(183, 100%, 15%); 
+    font-weight: 700;
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center; 
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+    color: hsl(183, 100%, 15%);
+ }
+.peopleCon {
+    cursor: pointer;
+}
+/* .peopleLabel {
+
+} */
+.peopleInput {
+    padding: 0 1.5% 0 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(189, 41%, 97%);
+    border-radius: 0.3rem;
+}
+#people {
+    background: hsl(189, 41%, 97%);
+    text-align: right;
+}
+.partTwo {
+    padding: 4% 2% 2% 2%;
+    border-radius: 0.7rem;
+    background: hsl(183, 100%, 15%);
+    color: white;
+}
+.tips1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11%;
+}
+.tips2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20%;
+}
+.amountSpan {
+    color: hsl(184, 14%, 56%);
+}
+h2 {
+    font-size: 2.4rem;
+    color: hsl(172, 67%, 45%)
+}
+/* .resetCon {
+    
+} */
+.resetBtn {
+    height: 2.5rem;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    background: hsl(172, 67%, 45%);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.resetBtn:hover {
+    background: hsl(186, 14%, 43%);
+}
+.resetBtn:focus {
+    background: hsl(186, 14%, 43%);
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+    text-decoration: none;
+}
+.attribution a:hover {
+    color: red;
+}
+
+
+
+/**************************************
+STYLES FOR SCREEN SIZE 980PX
+**************************************/
+@media all and ( max-width: 980px ) {
+    main {
+        width: 70%;
+    }
+}
+
+/**************************************
+STYLES FOR SCREEN SIZE 850PX
+**************************************/
+@media all and ( max-width: 850px ) {
+    main {
+        width: 80%;
+    }
+}
+
+/**************************************
+STYLES FOR SCREEN SIZE 750PX
+**************************************/
+@media all and ( max-width: 750px ) {
+    main {
+        width: 92%;
+    }
+}
+
+/**************************************
+STYLES FOR SCREEN SIZE 450PX
+**************************************/
+@media all and ( max-width: 450px ) {
+    body {
+        height: auto;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    header {
+        margin-bottom: 3rem;
+    }
+   main {
+       flex-direction: column;
+       width: 101%;
+       border-radius: 2rem;
+       margin-bottom: 1rem;
+   }
+   .tipBtn {
+    width: 45%;
+}
+}

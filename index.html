@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="logo" class="logo">
+  </header>
+  <main>
+    <section class="partOne">
+      <section class="billCon">
+        <div class="conDiv">
+          <label for="bill" class="billLabel">Bill</label>
+          <span class="errorBill"></span>
+        </div>
+        <div class="billInput">
+          <img src="images/icon-dollar.svg" alt="dollar icon" class="dollar icon">
+          <input type="number" id="bill" min="1">
+        </div>
+      </section>
+      <section class="tipSelect">
+        <span class="selectTip">Select Tip %</span>
+        <div class="tipBtns">
+          <button class="tipBtn" value="5"> 5%</button>
+          <button class="tipBtn" value="10">10%</button>
+          <button class="tipBtn" value="15">15%</button>
+          <button class="tipBtn" value="25">25%</button>
+          <button class="tipBtn" value="50">50%</button>
+          <input type="number" min="1" id="customTip" class="tipBtn" placeholder="Custom">
+        </div>
+      </section>
+      <section class="peopleCon">
+        <div class="conDiv">
+          <label for="people" class="peopleLabel">Number of People</label>
+          <span class="errorPeople"></span>
+        </div>
+        <div class="peopleInput">
+          <img src="images/icon-person.svg" alt="person icon" class="person icon">
+          <input type="number" id="people" min="1">
+        </div>
+      </section>
+    </section>
+
+    <section class="partTwo">
+      <section class="tips1">
+        <div class="tipAmount">
+          <p>Tip Amount</p>
+          <span class="amountSpan">/ person</span>
+        </div>
+        <h2 class="displayTip">$0.00</h2>
+      </section>
+      <section class="tips2">
+        <div class="tipAmount">
+          <p>Total</p>
+          <span class="amountSpan">/ person</span>
+        </div>
+        <h2 class="displayTotal">$0.00</h2>
+      </section>
+      
+      <section class="resetCon">
+        <button class="resetBtn" type="reset">Reset</button>
+      </section>
+    </section>
+  </main>  
+ 
+  <footer class="attribution">
+    Coded by <a href="https://activuscode.hashnode.dev/">D.M. Oladele</a>.
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
