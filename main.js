@@ -45,15 +45,15 @@ keyPressOutput.forEach( e => {
 
 const splitter = {
     parseInput(tip) {
-        if( (bill.value === null || bill.value == 0) && (numOfPeople === null || numOfPeople.value == 0) ) {
+        if( (bill.value === null || bill.value <= 0) && (numOfPeople === null || numOfPeople.value <= 0) ) {
             document.querySelector('.errorBill').textContent = `Can't be zero`
             document.querySelector('.errorPeople').textContent = `Can't be zero`
             document.querySelector('.peopleInput').style.border = "1px solid red"
             document.querySelector('.billInput').style.border = "1px solid red"
-        }else if( bill.value === null || bill.value == 0 ) {
+        }else if( bill.value === null || bill.value <= 0 ) {
             document.querySelector('.errorBill').textContent = `Can't be zero`
             document.querySelector('.billInput').style.border = "1px solid red"
-        }else if( numOfPeople === null || numOfPeople.value == 0 ) {
+        }else if( numOfPeople === null || numOfPeople.value <= 0 ) {
             document.querySelector('.errorPeople').textContent = `Can't be zero`
             document.querySelector('.peopleInput').style.border = "1px solid red"
         }else{
