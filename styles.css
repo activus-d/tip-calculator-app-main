@@ -53,6 +53,7 @@ LAYOUT
 **********************************/
 body {
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
