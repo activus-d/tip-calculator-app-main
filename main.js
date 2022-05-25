@@ -48,11 +48,17 @@ const splitter = {
         if( (bill.value === null || bill.value == 0) && (numOfPeople === null || numOfPeople.value == 0) ) {
             document.querySelector('.errorBill').textContent = `Can't be zero`
             document.querySelector('.errorPeople').textContent = `Can't be zero`
+            document.querySelector('.peopleInput').style.border = "1px solid red"
+            document.querySelector('.billInput').style.border = "1px solid red"
         }else if( bill.value === null || bill.value == 0 ) {
             document.querySelector('.errorBill').textContent = `Can't be zero`
+            document.querySelector('.billInput').style.border = "1px solid red"
         }else if( numOfPeople === null || numOfPeople.value == 0 ) {
             document.querySelector('.errorPeople').textContent = `Can't be zero`
+            document.querySelector('.peopleInput').style.border = "1px solid red"
         }else{
+            document.querySelector('.peopleInput').style.border = "none"
+            document.querySelector('.billInput').style.border = "none"
             document.querySelector('.errorBill').textContent = ''
             document.querySelector('.errorPeople').textContent = ''
             displayTip.textContent = '$' + this.tipPerPerson(tip)
@@ -83,6 +89,8 @@ document.querySelector('.resetBtn').addEventListener('click', () => {
     customTip.value = ''
     document.querySelector('.errorBill').textContent = ''
     document.querySelector('.errorPeople').textContent = ''
+    document.querySelector('.peopleInput').style.border = "none"
+    document.querySelector('.billInput').style.border = "none"
 })
 
 

@@ -18,11 +18,32 @@ input {
     border: none;
     cursor: pointer;
     padding-right: 2rem;
-    color: hsl(183, 100%, 15%);
-    
+    color: hsl(186, 14%, 43%); 
 }
 input:focus {
-    outline: 2px solid hsl(172, 67%, 45%);
+    outline: none;
+}
+::-webkit-input-placeholder {
+    text-align: right;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+}
+ 
+:-moz-placeholder { /* Firefox 18- */
+    text-align: right; 
+    color: hsl(186, 14%, 43%); 
+    font-weight: 700;
+}
+ 
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: right; 
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+}
+
+:-ms-input-placeholder {  
+    text-align: right; 
+    color: hsl(186, 14%, 43%);
 }
 
 
@@ -95,6 +116,12 @@ main {
     border-radius: 0.3rem;
     cursor: pointer;
 }
+.billInput:hover {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+.peopleInput:hover {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
 .icon {
     width: 1rem;
     height: 1.3rem;
@@ -136,28 +163,10 @@ main {
     font-size: 1rem;
     text-align: right;
 }
-::-webkit-input-placeholder {
-    text-align: center;
-    color: hsl(183, 100%, 15%);
-    font-weight: 700;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    text-align: center; 
-    color: hsl(183, 100%, 15%); 
-    font-weight: 700;
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    text-align: center; 
-    color: hsl(183, 100%, 15%);
-    font-weight: 700;
- }
- 
- :-ms-input-placeholder {  
-    text-align: center; 
-    color: hsl(183, 100%, 15%);
- }
+#customTip:focus {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
 .peopleCon {
     cursor: pointer;
 }
