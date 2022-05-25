@@ -19,6 +19,7 @@ input {
     cursor: pointer;
     padding-right: 2rem;
     color: hsl(186, 14%, 43%); 
+    font-size: 1.7rem;
 }
 input:focus {
     outline: none;
@@ -160,7 +161,7 @@ main {
 #customTip {
     color: hsl(183, 100%, 15%);
     background: hsl(189, 41%, 97%);
-    font-size: 1rem;
+    font-size: 1.7rem;
     text-align: right;
 }
 #customTip:focus {
