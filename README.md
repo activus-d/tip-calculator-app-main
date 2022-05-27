@@ -39,6 +39,7 @@ Users should be able to:
 
 ### What I learned
 - learned how to use keypress enter event
+- learned an event that retreives live value of an input as it is entered
 
 ### Continued development
 - Need to continue mastering page responsiveness
