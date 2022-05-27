@@ -13,12 +13,26 @@ let displayTotal = document.querySelector('.displayTotal')
 let tips = document.querySelector('.tipBtns')
 let customTip = document.querySelector('#customTip')
 
+let valueStorage = 0
 tips.addEventListener('click', event => { //add click event to tip buttons to get get value and give output
     target = event.target;
     let tip = target.value
-    tipClone = tip
-    !target.matches('button') ? '' : splitter.parseInput(tip)
+    !target.matches('button',) ? '' : ( splitter.parseInput(tip), valueStorage = tip ) // performs calculation when tip button is clicked and also assigns the value of button clicked to valueStorage
 })
+
+customTip.addEventListener('input', () => { // allows live calculation of values while taking custom tip input
+    valueStorage = customTip.value //assigns value of custom tip to value storage
+    splitter.parseInput(valueStorage)
+})
+
+bill.addEventListener('input', () => { // allows live calculation of values while taking bill input
+    splitter.parseInput(valueStorage)
+})
+
+numOfPeople.addEventListener('input', () => { // allows live calculation of values while taking numOfPeople input
+    splitter.parseInput(valueStorage)
+})
+
 
 let keyPressOutput = [bill, customTip, numOfPeople]
 keyPressOutput.forEach( e => {
@@ -40,12 +54,18 @@ const splitter = {
             document.querySelector('.errorPeople').textContent = `Can't be zero`
             document.querySelector('.peopleInput').style.border = "1px solid red"
             document.querySelector('.billInput').style.border = "1px solid red"
+            displayTip.textContent = '$0.00'
+            displayTotal.textContent = '$0.00'
         }else if( bill.value === null || bill.value <= 0 ) {
             document.querySelector('.errorBill').textContent = `Can't be zero`
             document.querySelector('.billInput').style.border = "1px solid red"
+            displayTip.textContent = '$0.00'
+            displayTotal.textContent = '$0.00'
         }else if( numOfPeople === null || numOfPeople.value <= 0 ) {
             document.querySelector('.errorPeople').textContent = `Can't be zero`
             document.querySelector('.peopleInput').style.border = "1px solid red"
+            displayTip.textContent = '$0.00'
+            displayTotal.textContent = '$0.00'
         }else{
             document.querySelector('.peopleInput').style.border = "none"
             document.querySelector('.billInput').style.border = "none"
@@ -74,8 +94,8 @@ const splitter = {
 document.querySelector('.resetBtn').addEventListener('click', () => { //clear all input and button value(RESET)
     displayTip.textContent = '$0.00'
     displayTotal.textContent = '$0.00'
-    bill.value = 0
-    numOfPeople.value = 0
+    bill.value = ''
+    numOfPeople.value = ''
     customTip.value = ''
     document.querySelector('.errorBill').textContent = ''
     document.querySelector('.errorPeople').textContent = ''
