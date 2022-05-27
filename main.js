@@ -33,16 +33,6 @@ keyPressOutput.forEach( e => {
       });
 } )
 
-// customTip.addEventListener("keypress", function(event) { // add keypress event to custom tip input to get value entered and give output
-//     // If the user presses the "Enter" key on the keyboard
-//     if (event.key === "Enter") {
-//       // Cancel the default action, if needed
-//       event.preventDefault();
-//       // Trigger the button element with a click
-//         splitter.parseInput(Number(customTip.value))
-//     }
-//   });
-
 const splitter = {
     parseInput(tip) {
         if( (bill.value === null || bill.value <= 0) && (numOfPeople === null || numOfPeople.value <= 0) ) {
@@ -81,7 +71,7 @@ const splitter = {
     }
 }
 
-document.querySelector('.resetBtn').addEventListener('click', () => {
+document.querySelector('.resetBtn').addEventListener('click', () => { //clear all input and button value(RESET)
     displayTip.textContent = '$0.00'
     displayTotal.textContent = '$0.00'
     bill.value = 0
@@ -92,10 +82,3 @@ document.querySelector('.resetBtn').addEventListener('click', () => {
     document.querySelector('.peopleInput').style.border = "none"
     document.querySelector('.billInput').style.border = "none"
 })
-
-
-
-
-
-
-
