@@ -17,7 +17,7 @@ let valueStorage = 0
 tips.addEventListener('click', event => { //add click event to tip buttons to get get value and give output
     target = event.target;
     let tip = target.value
-    !target.matches('button',) ? '' : ( splitter.parseInput(tip), valueStorage = tip ) // performs calculation when tip button is clicked and also assigns the value of button clicked to valueStorage
+    !target.matches('button') ? '' : ( splitter.parseInput(tip), valueStorage = tip ) // performs calculation when tip button is clicked and also assigns the value of button clicked to valueStorage
 })
 
 customTip.addEventListener('input', () => { // allows live calculation of values while taking custom tip input
