@@ -20,23 +20,9 @@ tips.addEventListener('click', event => { //add click event to tip buttons to ge
     !target.matches('button') ? '' : ( splitter.parseInput(tip), valueStorage = tip ) // performs calculation when tip button is clicked and also assigns the value of button clicked to valueStorage
 })
 
-customTip.addEventListener('input', () => { // allows live calculation of values while taking custom tip input
-    valueStorage = customTip.value //assigns value of custom tip to value storage
-    splitter.parseInput(valueStorage)
-})
-
-bill.addEventListener('input', () => { // allows live calculation of values while taking bill input
-    splitter.parseInput(valueStorage)
-})
-
-numOfPeople.addEventListener('input', () => { // allows live calculation of values while taking numOfPeople input
-    splitter.parseInput(valueStorage)
-})
-
-
-let keyPressOutput = [bill, customTip, numOfPeople]
-keyPressOutput.forEach( e => {
-    e.addEventListener("keypress", function(event) { // add keypress event to all inputs to get value entered and give output
+let inputs = [bill, customTip, numOfPeople]
+inputs.forEach( e => { //program to add keypress event to all inputs to get value entered and give output
+    e.addEventListener("keypress", function(event) { 
         // If the user presses the "Enter" key on the keyboard
         if (event.key === "Enter") {
           // Cancel the default action, if needed
@@ -46,6 +32,22 @@ keyPressOutput.forEach( e => {
         }
       });
 } )
+
+ inputs.forEach( e => { // program to allow live calculation of values while taking bill input, customTip input and numOfPeopleInput
+    if( e === customTip ) {
+        e.addEventListener('input', () => {
+            if( customTip !== null || customTip > 0 ) {
+                valueStorage = customTip.value //assigns value of custom tip to value storage
+                splitter.parseInput(valueStorage)
+            }
+        } )
+    }else {
+        e.addEventListener( 'input', () => {
+            splitter.parseInput(valueStorage) // allows live calculation of values while taking numOfPeople input and bill input
+        })
+    }
+ })
+
 
 const splitter = {
     parseInput(tip) {
